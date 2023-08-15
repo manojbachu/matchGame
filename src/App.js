@@ -272,6 +272,7 @@ class App extends Component {
       score: 0,
       time: 60,
     })
+    this.statusChange()
   }
 
   statusChange = () => {
@@ -391,7 +392,7 @@ class App extends Component {
 
     return (
       <div className="app-container">
-        <div className="navbar-container">
+        <ul className="navbar-container">
           <img
             className="website-logo"
             src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
@@ -410,7 +411,7 @@ class App extends Component {
               <p className="time">{time} Sec</p>
             </div>
           </div>
-        </div>
+        </ul>
         {isGameContinue ? this.playGame() : this.gameOver()}
       </div>
     )
